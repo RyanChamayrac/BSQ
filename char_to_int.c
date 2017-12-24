@@ -23,6 +23,5 @@ int	*char_to_int(char *str)
 	}
 	tab[count - 1] = -41;
 	tab[count] = -69;
-	//free(tab);
 	return (tab);
 }

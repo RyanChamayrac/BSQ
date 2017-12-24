@@ -9,7 +9,7 @@
 
 void	baisecul(char *filepath)
 {
-	unsigned int taille = get_size(filepath);
+	unsigned int size = get_size(filepath);
 	//printf("%d", size);
 	int fd;
 	int str_count = 0;
@@ -17,28 +17,20 @@ void	baisecul(char *filepath)
 	char *buffer;
 	int *tab;
 
-	buffer = malloc(taille);
+	buffer = malloc(size);
 	fd = open(filepath, O_RDWR);
 	while (bean[str_count] != '\n')
 		read(fd, bean, 1);
-	read(fd, buffer, taille);
+	read(fd, buffer, size);
 	tab = char_to_int(buffer);
 	algo(tab);
-	//print_tab(tab);
 	int a = max_value(tab);
 	int b = find_max_value(tab, a);
 	final_print(buffer, a, b);
 	my_putstr(buffer);
-	//free(tab);
+	free(tab);
 	close(fd);
 }
-
-/*void	skip1(char *str)
-{
-	int a = 0;
-
-	while (str[a] != '\n')
-}*/
 
 int	main(int ac, char **av)
 {
