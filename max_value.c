@@ -5,6 +5,8 @@
 ** algo bsq
 */
 
+#include <my.h>
+
 int	max_value(int *tab)
 {
 	int count = 0;

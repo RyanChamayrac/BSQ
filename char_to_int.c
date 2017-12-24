@@ -7,9 +7,9 @@
 
 #include <my.h>
 
-int	*char_to_int(char *str)
+int	*char_to_int(char *str, int buf_size)
 {
-	int *tab = malloc(sizeof(int) * (my_strlen(str) + 1));
+	int *tab = malloc(sizeof(int) * buf_size);
 	int count = 0;
 
 	while (str[count] != '\0') {
@@ -23,5 +23,6 @@ int	*char_to_int(char *str)
 	}
 	tab[count - 1] = -41;
 	tab[count] = -69;
+	//free(tab);
 	return (tab);
 }

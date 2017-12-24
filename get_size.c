@@ -5,7 +5,7 @@
 ** size
 */
 
-#include <sys/stat.h>
+#include <my.h>
 
 int	get_size(char *filename)
 {

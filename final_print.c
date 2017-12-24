@@ -5,6 +5,8 @@
 ** algo bsq
 */
 
+#include <my.h>
+
 void	final_print(char *buffer, int max_value, int pos)
 {
 	int count = pos;
