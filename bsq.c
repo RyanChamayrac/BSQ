@@ -1,21 +1,35 @@
 /*
 ** EPITECH PROJECT, 2017
-** my_popup
+** bsq
 ** File description:
 ** a
 */
 
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdlib.h>
+#include <my.h>
 
 void	baisecul(char *filepath)
 {
-	int a = 20000;
-	int fd = open(filepath, O_RDWR);
-	char buffer[30000];
-	read(fd, buffer, a);
+	unsigned int taille = get_size(filepath);
+	//printf("%d", size);
+	int fd;
+	int str_count = 0;
+	char bean[17];
+	char *buffer;
+	int *tab;
+
+	buffer = malloc(taille);
+	fd = open(filepath, O_RDWR);
+	while (bean[str_count] != '\n')
+		read(fd, bean, 1);
+	read(fd, buffer, taille);
+	tab = char_to_int(buffer);
+	algo(tab);
+	//print_tab(tab);
+	int a = max_value(tab);
+	int b = find_max_value(tab, a);
+	final_print(buffer, a, b);
 	my_putstr(buffer);
+	//free(tab);
 	close(fd);
 }
 
@@ -26,8 +40,13 @@ void	baisecul(char *filepath)
 	while (str[a] != '\n')
 }*/
 
-int	main(int ag, char **av)
+int	main(int ac, char **av)
 {
-	baisecul(av[1]);
+	if (ac == 2)
+		baisecul(av[1]);
+	else {
+		my_putstr("Error : Map Needed\n");
+		return (84);
+	}
 	return (0);
 }
