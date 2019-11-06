@@ -1,14 +1,14 @@
-SRC=		my_putstr.c	\
-		bsq.c		\
-		get_size.c	\
-		my_strlen.c	\
-		char_to_int.c	\
-		algo.c		\
-		my_tablen.c	\
-		max_value.c	\
-		final_print.c	\
-		find_max_value.c\
-		count_lines.c
+SRC=		utility/my_putstr.c	\
+		src/bsq.c		\
+		src/get_size.c	\
+		utility/my_strlen.c	\
+		utility/char_to_int.c	\
+		src/algo.c		\
+		utility/my_tablen.c	\
+		src/max_value.c	\
+		src/final_print.c	\
+		src/find_max_value.c\
+		utility/count_lines.c
 
 OBJ=		$(SRC:.c=.o)
 
